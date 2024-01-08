@@ -24,6 +24,7 @@
 		F358C7972B4A0CB400AB0AF4 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = F358C7942B4A05FF00AB0AF4 /* GoogleService-Info.plist */; };
 		F358C79A2B4A128E00AB0AF4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358C7992B4A128E00AB0AF4 /* UserModel.swift */; };
 		F3AD920B2B4B356200B98E61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920A2B4B356200B98E61 /* Constants.swift */; };
+		F3AD920D2B4B3A7E00B98E61 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F358C7952B4A092C00AB0AF4 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		F358C7992B4A128E00AB0AF4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F3AD920A2B4B356200B98E61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,8 @@
 		F358C7662B49AD5C00AB0AF4 /* ArquiteturaApp */ = {
 			isa = PBXGroup;
 			children = (
-				F3AD92092B4B34A300B98E61 /* Infraestructure */,
 				F358C76B2B49AD5C00AB0AF4 /* ViewController.swift */,
+				F3AD92092B4B34A300B98E61 /* Infraestructure */,
 				F358C7912B49F94500AB0AF4 /* API */,
 				F358C78C2B49F6E400AB0AF4 /* Aplication */,
 				F358C78D2B49F70100AB0AF4 /* Assets */,
@@ -147,6 +149,7 @@
 		F358C7902B49F93200AB0AF4 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				F358C76C2B49AD5C00AB0AF4 /* ViewController.swift in Sources */,
 				F358C7682B49AD5C00AB0AF4 /* AppDelegate.swift in Sources */,
 				F358C76A2B49AD5C00AB0AF4 /* SceneDelegate.swift in Sources */,
+				F3AD920D2B4B3A7E00B98E61 /* UserBusiness.swift in Sources */,
 				F3AD920B2B4B356200B98E61 /* Constants.swift in Sources */,
 				F358C79A2B4A128E00AB0AF4 /* UserModel.swift in Sources */,
 				F358C7962B4A092D00AB0AF4 /* UserProvider.swift in Sources */,

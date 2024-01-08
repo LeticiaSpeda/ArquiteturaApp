@@ -2,9 +2,9 @@ import Foundation
 import FirebaseAuth
 
 protocol UserProviderProtocol {
-    func register(parameters: [AnyHashable: Any], completionHadler: @escaping(Result<UserModel, Error>) -> Void)
-    
     func login(parameters: [AnyHashable: Any],  completionHadler: @escaping(Result<UserModel, Error>) -> Void)
+    
+    func register(parameters: [AnyHashable: Any], completionHadler: @escaping(Result<UserModel, Error>) -> Void)
 }
 
 final class UserProvider: UserProviderProtocol {
@@ -24,7 +24,16 @@ final class UserProvider: UserProviderProtocol {
     }
     
     func register(parameters: [AnyHashable : Any], completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
+        let body: NSDictionary = parameters[Constants.ParametersKeys.body] as! NSDictionary
+        let userModel = body[Constants.ParametersKeys.userModel] as! UserModel
         
+        self.auth.createUser(withEmail: userModel.email, password: userModel.password) { (result, error) in
+            if let error = error {
+                completionHadler(.failure(error))
+            } else {
+                completionHadler(.success(userModel))
+            }
+        }
     }
     
 }
