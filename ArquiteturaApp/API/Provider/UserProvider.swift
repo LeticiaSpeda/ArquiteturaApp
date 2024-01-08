@@ -11,8 +11,11 @@ final class UserProvider: UserProviderProtocol {
     private lazy var auth = Auth.auth()
     
     func login(parameters: [AnyHashable : Any], completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
-        let body: NSDictionary = parameters[Constants.ParametersKeys.body] as! NSDictionary
-        let userModel = body[Constants.ParametersKeys.userModel] as! UserModel
+        guard let body = parameters[Constants.ParametersKeys.body] as? NSDictionary,
+              let userModel = body[Constants.ParametersKeys.userModel] as? UserModel else {
+            // Handle the error - maybe call completionHandler with a custom Error
+            return
+        }
         
         self.auth.signIn(withEmail: userModel.email, password: userModel.password) { (result, error) in
             if let error = error {
@@ -24,8 +27,10 @@ final class UserProvider: UserProviderProtocol {
     }
     
     func register(parameters: [AnyHashable : Any], completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
-        let body: NSDictionary = parameters[Constants.ParametersKeys.body] as! NSDictionary
-        let userModel = body[Constants.ParametersKeys.userModel] as! UserModel
+        guard let body = parameters[Constants.ParametersKeys.body] as? NSDictionary,
+              let userModel = body[Constants.ParametersKeys.userModel] as? UserModel else {
+            return
+        }
         
         self.auth.createUser(withEmail: userModel.email, password: userModel.password) { (result, error) in
             if let error = error {
@@ -35,5 +40,4 @@ final class UserProvider: UserProviderProtocol {
             }
         }
     }
-    
 }
