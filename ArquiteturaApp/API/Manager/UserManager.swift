@@ -1,17 +1,37 @@
 import Foundation
 
 protocol UserManagerProtocol  {
-    func login(email: String, password: String, completionHandler: @escaping(Result<UserModel, Error>) -> Void)
+    func login(email: String, password: String, successHandler: @escaping(UserModel) -> Void, failureHandler: @escaping(Error) -> Void)
     
     func register(email: String, password: String, successHandler: @escaping(UserModel) -> Void, failureHandler: @escaping(Error) -> Void)
 }
 
 final class UserManager: UserManagerProtocol {
-    func login(email: String, password: String, completionHandler: @escaping (Result<UserModel, Error>) -> Void) {
-        <#code#>
+    private let business: UserBusinessProtocol
+    
+    init(business: UserBusinessProtocol) {
+        self.business = business
+    }
+    
+    func login(email: String, password: String, successHandler: @escaping (UserModel) -> Void, failureHandler: @escaping (Error) -> Void) {
+        business.login(email: email, password: password) { result in
+            switch result {
+            case .success(let userModel):
+                successHandler(userModel)
+            case .failure(let error):
+                failureHandler(error)
+            }
+        }
     }
     
     func register(email: String, password: String, successHandler: @escaping (UserModel) -> Void, failureHandler: @escaping (Error) -> Void) {
-        <#code#>
+        business.register(email: email, password: password) { result in
+            switch result {
+            case .success(let userModel):
+                successHandler(userModel)
+            case .failure(let error):
+                failureHandler(error)
+            }
+        }
     }
 }
