@@ -13,7 +13,6 @@ final class UserProvider: UserProviderProtocol {
     func login(parameters: [AnyHashable : Any], completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
         guard let body = parameters[Constants.ParametersKeys.body] as? NSDictionary,
               let userModel = body[Constants.ParametersKeys.userModel] as? UserModel else {
-            // Handle the error - maybe call completionHandler with a custom Error
             return
         }
         
