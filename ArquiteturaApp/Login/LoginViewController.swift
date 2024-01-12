@@ -2,6 +2,8 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
+    let presenter = LoginPresenter()
+    
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "Email"
@@ -51,6 +53,7 @@ final class LoginViewController: UIViewController {
         button.setTitle("Entrar", for: .normal)
         button.backgroundColor = .systemGreen
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -59,12 +62,26 @@ final class LoginViewController: UIViewController {
         button.setTitle("Registrar", for: .normal)
         button.backgroundColor = .systemGreen
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
-
+    
+    @objc func tappedLoginButton() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            let userModel = UserModel(email: email, password: password)
+            presenter.login(userModel: userModel)
+        }
+    }
+    
+    @objc func tappedRegisterButton() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        presenter.delegate = self
     }
     
     private func commonInit() {
@@ -116,5 +133,14 @@ final class LoginViewController: UIViewController {
     
     private func setupStyle() {
         view.backgroundColor = .systemMint
+    }
+}
+
+
+extension LoginViewController: LoginPresenterDelegate {
+    func showMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
