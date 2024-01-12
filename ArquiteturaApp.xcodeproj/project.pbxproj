@@ -27,6 +27,7 @@
 		F3AD920B2B4B356200B98E61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920A2B4B356200B98E61 /* Constants.swift */; };
 		F3AD920D2B4B3A7E00B98E61 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */; };
 		F3B465212B51B121008DBD72 /* RegisterVierwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465202B51B121008DBD72 /* RegisterVierwController.swift */; };
+		F3B465232B51B416008DBD72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465222B51B416008DBD72 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		F3AD920A2B4B356200B98E61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		F3B465202B51B121008DBD72 /* RegisterVierwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVierwController.swift; sourceTree = "<group>"; };
+		F3B465222B51B416008DBD72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +109,14 @@
 			isa = PBXGroup;
 			children = (
 				F358C76B2B49AD5C00AB0AF4 /* LoginViewController.swift */,
+				F3B465202B51B121008DBD72 /* RegisterVierwController.swift */,
+				F3B465222B51B416008DBD72 /* HomeViewController.swift */,
 				F3AD92092B4B34A300B98E61 /* Infraestructure */,
 				F358C7912B49F94500AB0AF4 /* API */,
 				F358C78C2B49F6E400AB0AF4 /* Aplication */,
 				F358C78D2B49F70100AB0AF4 /* Assets */,
 				F358C7752B49AD5D00AB0AF4 /* Info.plist */,
 				F358C7942B4A05FF00AB0AF4 /* GoogleService-Info.plist */,
-				F3B465202B51B121008DBD72 /* RegisterVierwController.swift */,
 			);
 			path = ArquiteturaApp;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				F358C7682B49AD5C00AB0AF4 /* AppDelegate.swift in Sources */,
 				F358C76A2B49AD5C00AB0AF4 /* SceneDelegate.swift in Sources */,
 				F3AD920D2B4B3A7E00B98E61 /* UserBusiness.swift in Sources */,
+				F3B465232B51B416008DBD72 /* HomeViewController.swift in Sources */,
 				F3AD920B2B4B356200B98E61 /* Constants.swift in Sources */,
 				F358C79A2B4A128E00AB0AF4 /* UserModel.swift in Sources */,
 				F358C7962B4A092D00AB0AF4 /* UserProvider.swift in Sources */,
