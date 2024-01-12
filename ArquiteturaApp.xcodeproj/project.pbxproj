@@ -26,6 +26,7 @@
 		F358C79A2B4A128E00AB0AF4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358C7992B4A128E00AB0AF4 /* UserModel.swift */; };
 		F3AD920B2B4B356200B98E61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920A2B4B356200B98E61 /* Constants.swift */; };
 		F3AD920D2B4B3A7E00B98E61 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */; };
+		F3B465212B51B121008DBD72 /* RegisterVierwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465202B51B121008DBD72 /* RegisterVierwController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		F358C7992B4A128E00AB0AF4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F3AD920A2B4B356200B98E61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F3AD920C2B4B3A7E00B98E61 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
+		F3B465202B51B121008DBD72 /* RegisterVierwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVierwController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				F358C78D2B49F70100AB0AF4 /* Assets */,
 				F358C7752B49AD5D00AB0AF4 /* Info.plist */,
 				F358C7942B4A05FF00AB0AF4 /* GoogleService-Info.plist */,
+				F3B465202B51B121008DBD72 /* RegisterVierwController.swift */,
 			);
 			path = ArquiteturaApp;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B465212B51B121008DBD72 /* RegisterVierwController.swift in Sources */,
 				F302585B2B4C2FFA0061F04D /* UserManager.swift in Sources */,
 				F358C7972B4A0CB400AB0AF4 /* GoogleService-Info.plist in Sources */,
 				F358C76C2B49AD5C00AB0AF4 /* LoginViewController.swift in Sources */,
