@@ -2,6 +2,7 @@ import Foundation
 
 protocol LoginPresenterDelegate {
     func showMessage(title: String, message: String)
+    func goHome()
 }
 
 final class LoginPresenter {
@@ -10,7 +11,7 @@ final class LoginPresenter {
     func login(userModel: UserModel) {
         let manager = UserManager(business: UserBusiness())
         manager.login(email: userModel.email, password: userModel.password) { model in
-            
+            self.goHome()
             
         } failureHandler: { [weak self] error in
             self?.delegate?.showMessage(title: "Erro", message: "\(error.localizedDescription)")
@@ -18,6 +19,6 @@ final class LoginPresenter {
     }
     
     func goHome() {
-        
+        self.delegate?.goHome()
     }
 }
