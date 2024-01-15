@@ -11,7 +11,7 @@ final class LoginPresenter {
     func login(userModel: UserModel) {
         let manager = UserManager(business: UserBusiness())
         manager.login(email: userModel.email, password: userModel.password) { model in
-            self.goHome()
+            self.delegate?.showMessage(title: "Sucesso", message: "Logado!")
             
         } failureHandler: { [weak self] error in
             self?.delegate?.showMessage(title: "Erro", message: "\(error.localizedDescription)")
