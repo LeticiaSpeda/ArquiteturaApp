@@ -1,6 +1,7 @@
 import UIKit
 
 final class RegisterViewController: UIViewController {
+    let presenter = RegisterPresent()
     
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
@@ -51,6 +52,7 @@ final class RegisterViewController: UIViewController {
         button.setTitle("Entrar", for: .normal)
         button.backgroundColor = .systemGreen
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -59,12 +61,28 @@ final class RegisterViewController: UIViewController {
         button.setTitle("Registrar", for: .normal)
         button.backgroundColor = .systemGreen
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        presenter.delegate = self
+    }
+    
+    @objc func tappedLoginButton() {
+        
+    }
+    
+    @objc func tappedRegisterButton() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            let userModel = UserModel(email: email, password: password)
+            presenter.register(userModel: userModel)
+        } else {
+            showMessage(title: "Algo esta errado", message: "Tente Novamente")
+        }
     }
     
     private func commonInit() {
@@ -110,7 +128,6 @@ final class RegisterViewController: UIViewController {
             enterButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 10),
             enterButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
             enterButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            
         ])
     }
     
@@ -119,3 +136,17 @@ final class RegisterViewController: UIViewController {
     }
 }
 
+extension RegisterViewController: RegisterPresentDelegate {
+    func showMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+    
+    func goHome() {
+        let home = HomeViewController()
+        home.modalPresentationStyle = .fullScreen
+        present(home, animated: true)
+    }
+    
+}
