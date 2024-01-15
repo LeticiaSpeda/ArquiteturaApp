@@ -52,7 +52,6 @@ final class RegisterViewController: UIViewController {
         button.setTitle("Entrar", for: .normal)
         button.backgroundColor = .systemGreen
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -69,10 +68,6 @@ final class RegisterViewController: UIViewController {
         super.viewDidLoad()
         commonInit()
         presenter.delegate = self
-    }
-    
-    @objc func tappedLoginButton() {
-        
     }
     
     @objc func tappedRegisterButton() {

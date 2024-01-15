@@ -16,6 +16,5 @@ final class RegisterPresent {
         } failureHandler: { [weak self] error in
             self?.delegate?.showMessage(title: "Erro", message: "\(error.localizedDescription)")
         }
-
     }
 }

@@ -7,6 +7,7 @@ protocol UserBusinessProtocol {
 
 final class UserBusiness: UserBusinessProtocol {
     private let provider = UserProvider()
+    
     func login(email: String, password: String, completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
         
         provider.login(parameters: getParams( email, password)) { result in
@@ -20,6 +21,7 @@ final class UserBusiness: UserBusinessProtocol {
     }
     
     func register(email: String, password: String, completionHadler: @escaping (Result<UserModel, Error>) -> Void) {
+        
         provider.register(parameters: getParams(email, password)) { result in
             switch result {
             case .success(let userModel):

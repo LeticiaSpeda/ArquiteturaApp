@@ -29,6 +29,7 @@
 		F3B465212B51B121008DBD72 /* RegisterVierwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465202B51B121008DBD72 /* RegisterVierwController.swift */; };
 		F3B465232B51B416008DBD72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465222B51B416008DBD72 /* HomeViewController.swift */; };
 		F3B465262B51B830008DBD72 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B465252B51B830008DBD72 /* LoginPresenter.swift */; };
+		F3F53F532B5552BA00DC1822 /* RegisterPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F53F522B5552BA00DC1822 /* RegisterPresent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F3B465202B51B121008DBD72 /* RegisterVierwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVierwController.swift; sourceTree = "<group>"; };
 		F3B465222B51B416008DBD72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F3B465252B51B830008DBD72 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F3F53F522B5552BA00DC1822 /* RegisterPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +112,9 @@
 		F358C7662B49AD5C00AB0AF4 /* ArquiteturaApp */ = {
 			isa = PBXGroup;
 			children = (
-				F3B465242B51B81B008DBD72 /* Login */,
-				F3B465202B51B121008DBD72 /* RegisterVierwController.swift */,
 				F3B465222B51B416008DBD72 /* HomeViewController.swift */,
+				F3F53F512B5552AB00DC1822 /* Register */,
+				F3B465242B51B81B008DBD72 /* Login */,
 				F3AD92092B4B34A300B98E61 /* Infraestructure */,
 				F358C7912B49F94500AB0AF4 /* API */,
 				F358C78C2B49F6E400AB0AF4 /* Aplication */,
@@ -199,6 +201,15 @@
 				F3B465252B51B830008DBD72 /* LoginPresenter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F3F53F512B5552AB00DC1822 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F3B465202B51B121008DBD72 /* RegisterVierwController.swift */,
+				F3F53F522B5552BA00DC1822 /* RegisterPresent.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				F3B465262B51B830008DBD72 /* LoginPresenter.swift in Sources */,
 				F3B465212B51B121008DBD72 /* RegisterVierwController.swift in Sources */,
 				F302585B2B4C2FFA0061F04D /* UserManager.swift in Sources */,
+				F3F53F532B5552BA00DC1822 /* RegisterPresent.swift in Sources */,
 				F358C7972B4A0CB400AB0AF4 /* GoogleService-Info.plist in Sources */,
 				F358C76C2B49AD5C00AB0AF4 /* LoginViewController.swift in Sources */,
 				F358C7682B49AD5C00AB0AF4 /* AppDelegate.swift in Sources */,
