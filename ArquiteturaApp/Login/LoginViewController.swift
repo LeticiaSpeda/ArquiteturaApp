@@ -76,7 +76,9 @@ final class LoginViewController: UIViewController {
     }
     
     @objc func tappedRegisterButton() {
-        
+        let register = RegisterViewController()
+        register.modalPresentationStyle = .fullScreen
+        present(register, animated: true)
     }
     
     override func viewDidLoad() {
