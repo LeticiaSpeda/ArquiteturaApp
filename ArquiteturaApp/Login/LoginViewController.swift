@@ -139,9 +139,16 @@ final class LoginViewController: UIViewController {
 
 
 extension LoginViewController: LoginPresenterDelegate {
+    
     func showMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
+    }
+    
+    func goHome() {
+        let home = HomeViewController()
+        home.modalPresentationStyle = .fullScreen
+        present(home, animated: true)
     }
 }
