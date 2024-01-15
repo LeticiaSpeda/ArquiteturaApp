@@ -44,6 +44,7 @@ final class LoginViewController: UIViewController {
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 12, weight: .semibold)
         textField.layer.cornerRadius = 10
+        textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()

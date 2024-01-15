@@ -32,7 +32,7 @@ final class UserBusiness: UserBusinessProtocol {
     
     private func getParams(_ email: String, _ password: String) -> [AnyHashable: Any] {
         let userModel = UserModel(email: email, password: password)
-        let params: [AnyHashable: Any] = [Constants.ParametersKeys.body: [Constants.ParametersKeys.userModel]]
+        let params: [AnyHashable: Any] = [Constants.ParametersKeys.body: [Constants.ParametersKeys.userModel: userModel]]
         return params
     }
 }
